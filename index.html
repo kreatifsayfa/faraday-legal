@@ -4,40 +4,109 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Faraday — session notes that never leave the room</title>
-<meta name="description" content="Records a therapy session, transcribes it and drafts your SOAP note — entirely on your iPhone. No server, no vendor chain, no BAA to sign with anyone.">
+<meta name="description" content="Records a therapy session, transcribes it and drafts your SOAP note — entirely on your own device. No server, no vendor chain, no BAA to sign with anyone.">
+<meta property="og:title" content="Faraday — session notes that never leave the room">
+<meta property="og:description" content="Recording, transcription and drafting all run on your own device. Nobody else ever receives the session.">
+<meta property="og:type" content="website">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrap">
-<header>
-  <h1>Faraday</h1>
-  <p class="sub">Session notes that never leave the room.</p>
-  <nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="terms.html">Terms</a></nav>
+
+<header class="hero">
+  <div class="mark" aria-hidden="true">
+    <svg viewBox="0 0 120 120" width="72" height="72">
+      <circle cx="60" cy="60" r="40" fill="none" stroke="currentColor" stroke-width="2.4" opacity="0.85"/>
+      <g stroke="currentColor" stroke-width="1.2" opacity="0.3">
+        <line x1="60" y1="16" x2="60" y2="24"/><line x1="60" y1="96" x2="60" y2="104"/>
+        <line x1="16" y1="60" x2="24" y2="60"/><line x1="96" y1="60" x2="104" y2="60"/>
+        <line x1="29" y1="29" x2="34" y2="34"/><line x1="86" y1="86" x2="91" y2="91"/>
+        <line x1="91" y1="29" x2="86" y2="34"/><line x1="34" y1="86" x2="29" y2="91"/>
+      </g>
+      <g stroke="currentColor" stroke-width="3.6" stroke-linecap="round">
+        <line x1="40" y1="54" x2="40" y2="66"/><line x1="48" y1="48" x2="48" y2="72"/>
+        <line x1="56" y1="41" x2="56" y2="79"/><line x1="64" y1="50" x2="64" y2="70"/>
+        <line x1="72" y1="44" x2="72" y2="76"/><line x1="80" y1="55" x2="80" y2="65"/>
+      </g>
+    </svg>
+  </div>
+  <h1>Session notes that never leave the room</h1>
+  <p class="lede">Faraday records the session, transcribes it and drafts your note —
+  entirely on your own device. No account. No server. Nobody else ever receives it.</p>
+  <nav class="cta">
+    <a class="button primary" href="#download">Download for Mac</a>
+    <a class="button" href="#iphone">On iPhone</a>
+  </nav>
+  <p class="fine">Requires macOS 26 · Apple Intelligence for drafting</p>
 </header>
 
-<p>Most AI scribes are an interface. Behind them, the session audio goes to a
-transcription company, the transcript goes to an AI company, and the note comes back
-through an EHR. Three or four vendors touch the hour your client spent telling you
-something they have told no one else.</p>
+<section>
+  <h2>What the others do with your session</h2>
+  <p>Most AI scribes are an interface. Behind them the session audio goes to a
+  transcription company, the transcript goes to an AI company, and the note comes
+  back through an EHR. Three or four vendors touch the hour your client spent
+  telling you something they have told no one else.</p>
+  <p>Faraday touches none. Recording, transcription and drafting all run on your
+  Mac or iPhone using Apple's on-device speech and language models. There is no
+  third party that receives protected health information — which is why there is
+  no business associate agreement for you to review.</p>
+</section>
 
-<p>Faraday touches none. Recording, transcription and note drafting all run on your
-iPhone using Apple's on-device speech and language models. There is no account, no
-server, and no third party that receives protected health information — which is why
-there is no business associate agreement for you to review.</p>
+<section class="proof">
+  <h2>Don't take our word for it</h2>
+  <p>On a Mac, the absence is checkable. Faraday's sandbox holds no network
+  entitlement at all, so it cannot open a socket — not to us, not to anyone:</p>
+  <pre><code>codesign -d --entitlements - /Applications/Faraday.app</code></pre>
+  <p>On iPhone there is no equivalent, because network access there cannot be
+  declined. So do it the other way: <strong>turn on Airplane Mode and use Faraday
+  exactly as you would otherwise.</strong> Everything works, because nothing was
+  ever going anywhere. An app that sends your sessions to a server cannot
+  survive that test.</p>
+</section>
 
-<h2>Don't take our word for it</h2>
-<p>Turn on Airplane Mode and use Faraday exactly as you would otherwise. Everything
-works, because nothing was ever going anywhere.</p>
+<section>
+  <h2>What it does</h2>
+  <ul class="features">
+    <li><strong>SOAP, DAP or BIRP</strong> drafts from the session itself.</li>
+    <li><strong>The recording is deleted</strong> the moment the transcript is made.</li>
+    <li><strong>Risk quoted verbatim</strong>, in a section built without the language model — the part of a note that carries legal weight never depends on one.</li>
+    <li><strong>Every statement traceable</strong> back to the moment it came from. Anything that cannot be traced is discarded.</li>
+    <li><strong>Couples and family sessions</strong>, with each client kept distinct.</li>
+    <li><strong>Video sessions</strong> on the Mac: your microphone and the call's audio are captured separately, so Faraday always knows which of you said what.</li>
+    <li><strong>Unlimited notes.</strong> No per-session charge, because a note costs nothing to produce on your own machine.</li>
+    <li><strong>A consent form</strong> you can hand to a client before you record.</li>
+  </ul>
+</section>
 
-<h2>What it won't do</h2>
-<p>Faraday drafts; you decide. It sometimes mistakes who was speaking and cannot tell
-when it has, so it asks you to confirm before attributing anything to your client. It
-leaves a section empty rather than filling it with something plausible, and it
-discards any statement it cannot trace back to the recording.</p>
+<section class="limits">
+  <h2>What it won't do</h2>
+  <p>Faraday drafts; you decide. In an in-person session it sometimes mistakes who
+  was speaking and <em>cannot tell when it has</em> — so it asks you to confirm
+  before attributing anything to your client. It leaves a section empty rather than
+  filling it with something plausible.</p>
+  <p>Read every draft before it becomes a record. And obtaining your client's
+  consent, and complying with the recording law where you practise, remain yours.</p>
+</section>
+
+<section id="download">
+  <h2>Download for Mac</h2>
+  <p><a class="button primary" id="dmg" href="https://github.com/kreatifsayfa/faraday-legal/releases/latest">Get the latest release</a></p>
+  <p class="fine">macOS 26 or later, Apple silicon. Drafting needs Apple Intelligence;
+  without it Faraday still transcribes the session and records risk verbatim.</p>
+</section>
+
+<section id="iphone">
+  <h2>On iPhone</h2>
+  <p>Faraday is coming to the App Store. It needs iPhone 15 Pro or later with Apple
+  Intelligence enabled — that is where the on-device language model lives.</p>
+</section>
 
 <footer>
-  <p class="muted">Faraday is a documentation aid, not a medical device.</p>
+  <nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="terms.html">Terms</a></nav>
+  <p class="fine">Faraday is a documentation aid, not a medical device. It does not
+  diagnose and does not replace your clinical judgement.</p>
 </footer>
+
 </div>
 </body>
 </html>
