@@ -34,10 +34,10 @@
   <p class="lede">Faraday records the session, transcribes it and drafts your note —
   entirely on your own device. No account. No server. Nobody else ever receives it.</p>
   <nav class="cta">
-    <a class="button primary" href="#download">Download for Mac</a>
-    <a class="button" href="#iphone">On iPhone</a>
+    <a class="button primary" href="#apps">Where to get it</a>
+    <a class="button" href="#privacy">How it is checked</a>
   </nav>
-  <p class="fine">Requires macOS 26 · Apple Intelligence for drafting</p>
+  <p class="fine">iPhone and Mac · one subscription covers both</p>
 </header>
 
 <section>
@@ -52,16 +52,19 @@
   no business associate agreement for you to review.</p>
 </section>
 
-<section class="proof">
+<section class="proof" id="privacy">
   <h2>Don't take our word for it</h2>
-  <p>On a Mac, the absence is checkable. Faraday's sandbox holds no network
-  entitlement at all, so it cannot open a socket — not to us, not to anyone:</p>
-  <pre><code>codesign -d --entitlements - /Applications/Faraday.app</code></pre>
-  <p>On iPhone there is no equivalent, because network access there cannot be
-  declined. So do it the other way: <strong>turn on Airplane Mode and use Faraday
-  exactly as you would otherwise.</strong> Everything works, because nothing was
-  ever going anywhere. An app that sends your sessions to a server cannot
-  survive that test.</p>
+  <p>Every other claim on this page is something you have to believe. This one
+  you can settle in a minute, on either device, without us:</p>
+  <p><strong>Turn on Airplane Mode and run a whole session.</strong> Record it,
+  transcribe it, draft the note, read the transcript, export the PDF. All of it
+  works, because none of it was going anywhere. An app that sends your sessions
+  to a server cannot survive that test, and no amount of privacy copy changes
+  that.</p>
+  <p class="fine">The one thing Faraday does ask the network for is the price of
+  a subscription, which lives at Apple and differs by country — and the App
+  Store's answer is whether somebody paid, nothing else. There is no account, no
+  analytics, and no billing vendor in between.</p>
 </section>
 
 <section>
@@ -88,21 +91,18 @@
   consent, and complying with the recording law where you practise, remain yours.</p>
 </section>
 
-<section id="download">
-  <h2>Download for Mac</h2>
-  <p><a class="button primary" id="dmg" href="https://github.com/kreatifsayfa/faraday-legal/releases/latest/download/Faraday.dmg">Download Faraday 1.0</a></p>
-  <p class="fine">A 10&nbsp;MB disk image, signed and notarised by Apple. Open it and drag
-  Faraday to your Applications folder.
-  <a href="https://github.com/kreatifsayfa/faraday-legal/releases">All releases</a></p>
-  <p class="fine">macOS 26 or later. Drafting needs Apple Intelligence, and so a Mac with
-  Apple silicon; without it Faraday still transcribes the session and records risk
-  verbatim.</p>
-</section>
-
-<section id="iphone">
-  <h2>On iPhone</h2>
-  <p>Faraday is coming to the App Store. It needs iPhone 15 Pro or later with Apple
-  Intelligence enabled — that is where the on-device language model lives.</p>
+<section id="apps">
+  <h2>Where to get it</h2>
+  <p>Faraday is coming to the App Store for iPhone and for Mac. One subscription
+  covers both: buy it on either and it works on the other, because the App Store
+  tells each device what you own. Nothing about that goes through us — there is
+  no account to make and no server to sign in to.</p>
+  <p class="fine">On iPhone you record the session in the room. On the Mac you can
+  also record a video session, where your microphone and the call's audio are
+  captured separately, so Faraday always knows which of you spoke.</p>
+  <p class="fine">iPhone 15&nbsp;Pro or later, or a Mac with Apple silicon, running
+  iOS&nbsp;26 or macOS&nbsp;26. Drafting needs Apple Intelligence; without it Faraday
+  still transcribes the session and records risk verbatim.</p>
 </section>
 
 <footer>
