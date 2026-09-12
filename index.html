@@ -54,17 +54,22 @@
 
 <section class="proof" id="privacy">
   <h2>Don't take our word for it</h2>
-  <p>Every other claim on this page is something you have to believe. This one
-  you can settle in a minute, on either device, without us:</p>
+  <p>Every other claim on this page is something you have to believe. These two
+  you can settle yourself, in a minute, without us.</p>
   <p><strong>Turn on Airplane Mode and run a whole session.</strong> Record it,
   transcribe it, draft the note, read the transcript, export the PDF. All of it
   works, because none of it was going anywhere. An app that sends your sessions
   to a server cannot survive that test, and no amount of privacy copy changes
   that.</p>
-  <p class="fine">The one thing Faraday does ask the network for is the price of
-  a subscription, which lives at Apple and differs by country — and the App
-  Store's answer is whether somebody paid, nothing else. There is no account, no
-  analytics, and no billing vendor in between.</p>
+  <p><strong>On a Mac, read the signature.</strong> Faraday's sandbox holds no
+  network entitlement at all, which means the app cannot open a socket — not to
+  us, not to anyone. macOS enforces that, not our good intentions:</p>
+  <pre><code>codesign -d --entitlements - /Applications/Faraday.app</code></pre>
+  <p class="fine">You will see the sandbox and the microphone, and nothing else.
+  Subscriptions still work, because the App Store does that talking on the app's
+  behalf rather than through it — and what the App Store learns is that somebody
+  paid, nothing more. There is no account, no analytics, and no billing vendor
+  in between.</p>
 </section>
 
 <section>
